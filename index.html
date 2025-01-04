@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم عيش بلحم - ألذ السندويشات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .menu-item {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .menu-item img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .price {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">عيش بلحم</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">القائمة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">اطلب الآن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4">ألذ سندويشات عيش بلحم</h1>
+            <p class="lead">نقدم لكم أشهى وأجود أنواع اللحوم مع الخبز الطازج</p>
+            <a href="#order" class="btn btn-success btn-lg">اطلب الآن</a>
+        </div>
+    </section>
+
+    <!-- قائمة الطعام -->
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">قائمة الطعام</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://images.unsplash.com/photo-1559054663-e8d23213f55c" class="card-img-top" alt="ساندويتش لحم">
+                        <div class="card-body">
+                            <h5 class="card-title">ساندويتش لحم كلاسيك</h5>
+                            <p class="card-text">لحم طازج مشوي مع الخضروات والصلصة الخاصة</p>
+                            <p class="price">25 ريال</p>
+                            <button class="btn btn-success">أضف للطلب</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b" class="card-img-top" alt="ساندويتش دبل">
+                        <div class="card-body">
+                            <h5 class="card-title">ساندويتش دبل لحم</h5>
+                            <p class="card-text">طبقتين من اللحم المشوي مع الجبن والخضروات</p>
+                            <p class="price">35 ريال</p>
+                            <button class="btn btn-success">أضف للطلب</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card menu-item">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" class="card-img-top" alt="ساندويتش سبيشل">
+                        <div class="card-body">
+                            <h5 class="card-title">ساندويتش سبيشل</h5>
+                            <p class="card-text">لحم مشوي مع صلصة خاصة وإضافات مميزة</p>
+                            <p class="price">30 ريال</p>
+                            <button class="btn btn-success">أضف للطلب</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الطلب -->
+    <section id="order" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">اطلب الآن</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">الاسم</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">رقم الجوال</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">العنوان</label>
+                            <textarea class="form-control" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">ملاحظات إضافية</label>
+                            <textarea class="form-control" rows="2"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">إرسال الطلب</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معلومات الاتصال -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">اتصل بنا</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="fas fa-phone fa-2x mb-3 text-success"></i>
+                    <h5>اتصل بنا</h5>
+                    <p>+966 50 123 4567</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-map-marker-alt fa-2x mb-3 text-success"></i>
+                    <h5>موقعنا</h5>
+                    <p>شارع الملك فهد، الرياض</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-clock fa-2x mb-3 text-success"></i>
+                    <h5>ساعات العمل</h5>
+                    <p>كل يوم من 11 صباحاً - 11 مساءً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>جميع الحقوق محفوظة © 2025 - عيش بلحم</p>
+            <div class="social-links">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
